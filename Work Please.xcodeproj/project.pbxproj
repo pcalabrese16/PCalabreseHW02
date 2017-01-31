@@ -146,6 +146,7 @@
 				TargetAttributes = {
 					81640AAF1E31DC6700B5EACF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9XYBW6TC7K;
 						ProvisioningStyle = Automatic;
 					};
 					81640AC31E31DC6800B5EACF = {
@@ -339,11 +340,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9XYBW6TC7K;
 				INFOPLIST_FILE = "Work Please/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.calabrese.Work-Please";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -351,11 +355,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9XYBW6TC7K;
 				INFOPLIST_FILE = "Work Please/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.calabrese.Work-Please";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -406,6 +413,7 @@
 				81640ACF1E31DC6800B5EACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81640AD01E31DC6800B5EACF /* Build configuration list for PBXNativeTarget "Work PleaseTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +422,7 @@
 				81640AD21E31DC6800B5EACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
