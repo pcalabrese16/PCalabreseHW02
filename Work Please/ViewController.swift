@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageButton: UIButton!
     
     @IBOutlet weak var awesomeImage: UIImageView!
+
+    @IBOutlet weak var soundSwitch: UISwitch!
     
     var awesomePlayer = AVAudioPlayer()
     
@@ -81,6 +83,11 @@ class ViewController: UIViewController {
         
         random = nonRepeatedRandom(last: &lastSound, range: numOfSounds)
         playSound(soundName: "sound" + String(random))
+        
+        if soundSwitch.isOn == true {
+            random = nonRepeatedRandom(last: &lastSound, range: numOfSounds)
+            playSound(soundName: "sound" + String(random))
+        }
 
         /*
         if index == messages.count - 1 {
