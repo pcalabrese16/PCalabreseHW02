@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,45 +22,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-U3-mvG">
-                                <rect key="frame" x="16" y="28" width="343" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-U3-mvG">
+                                <rect key="frame" x="16" y="28" width="343" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="lft-Kv-9lf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-I2-jqP">
-                                <rect key="frame" x="228" y="181" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="ImR-GG-CaQ">
+                                <rect key="frame" x="16" y="235" width="343" height="343"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-EB-Be9">
+                                <rect key="frame" x="16" y="181" width="110" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="gER-8s-5LB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJn-0N-fDz">
+                                <rect key="frame" x="120" y="181" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="yX9-kd-gG3"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-I2-jqP">
+                                <rect key="frame" x="255" y="181" width="104" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybg-vp-4VE"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="ImR-GG-CaQ">
-                                <rect key="frame" x="16" y="235" width="343" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play Sound" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-EB-Be9">
-                                <rect key="frame" x="16" y="181" width="110" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJn-0N-fDz">
-                                <rect key="frame" x="120" y="181" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ht5-U3-mvG" firstAttribute="trailing" secondItem="Kok-I2-jqP" secondAttribute="trailing" id="2mm-4Q-XoB"/>
+                            <constraint firstItem="Kok-I2-jqP" firstAttribute="trailing" secondItem="ImR-GG-CaQ" secondAttribute="trailing" id="4Pa-85-Fb1"/>
+                            <constraint firstItem="ht5-U3-mvG" firstAttribute="leading" secondItem="Iuo-EB-Be9" secondAttribute="leading" id="C6M-is-bSe"/>
+                            <constraint firstItem="Kok-I2-jqP" firstAttribute="leading" secondItem="DJn-0N-fDz" secondAttribute="trailing" constant="86" id="DTY-yx-d0e"/>
+                            <constraint firstItem="ht5-U3-mvG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hcc-Nn-tgG"/>
+                            <constraint firstItem="Iuo-EB-Be9" firstAttribute="top" secondItem="ht5-U3-mvG" secondAttribute="bottom" constant="21" id="NJh-pF-0Rd"/>
+                            <constraint firstItem="DJn-0N-fDz" firstAttribute="top" secondItem="Kok-I2-jqP" secondAttribute="top" id="WaJ-Hs-ecA"/>
+                            <constraint firstItem="Iuo-EB-Be9" firstAttribute="bottom" secondItem="DJn-0N-fDz" secondAttribute="bottom" id="WpH-8h-5gE"/>
+                            <constraint firstItem="Iuo-EB-Be9" firstAttribute="top" secondItem="DJn-0N-fDz" secondAttribute="top" id="ZQf-Nj-8mf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ImR-GG-CaQ" secondAttribute="bottom" constant="89" id="dPe-IB-osG"/>
+                            <constraint firstItem="ht5-U3-mvG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iVf-zC-s3j"/>
+                            <constraint firstItem="ImR-GG-CaQ" firstAttribute="top" secondItem="Iuo-EB-Be9" secondAttribute="bottom" constant="23" id="nPg-W4-aSA"/>
+                            <constraint firstItem="DJn-0N-fDz" firstAttribute="centerY" secondItem="Kok-I2-jqP" secondAttribute="centerY" id="qtX-sS-MPa"/>
+                            <constraint firstItem="ht5-U3-mvG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="whe-Oj-Hen"/>
+                            <constraint firstItem="Iuo-EB-Be9" firstAttribute="leading" secondItem="ImR-GG-CaQ" secondAttribute="leading" id="xxy-2l-Luh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="awesomeImage" destination="ImR-GG-CaQ" id="wpQ-hz-dv4"/>
                         <outlet property="messageButton" destination="Kok-I2-jqP" id="zmi-NW-x5M"/>
                         <outlet property="messageLabel" destination="ht5-U3-mvG" id="M0J-K1-Tg6"/>
                         <outlet property="soundSwitch" destination="DJn-0N-fDz" id="kJG-HN-pEo"/>
-                        <outlet property="switch" destination="DJn-0N-fDz" id="TKO-RF-fLM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

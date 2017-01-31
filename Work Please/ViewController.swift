@@ -61,6 +61,17 @@ class ViewController: UIViewController {
         return random
     }
     
+
+    // MARK: Actions
+    
+    @IBAction func soundSwitchSwitched(_ sender: UISwitch) {
+        if soundSwitch.isOn == false {
+            if lastSound != -1 {
+                awesomePlayer.stop()
+            }
+        }
+    }
+    
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         
         let messages = ["You Are Fantastic!",
@@ -81,14 +92,11 @@ class ViewController: UIViewController {
         random = nonRepeatedRandom(last: &lastImage, range: numOfImages)
         awesomeImage.image = UIImage(named: "image" + String(random))
         
-        random = nonRepeatedRandom(last: &lastSound, range: numOfSounds)
-        playSound(soundName: "sound" + String(random))
-        
         if soundSwitch.isOn == true {
             random = nonRepeatedRandom(last: &lastSound, range: numOfSounds)
             playSound(soundName: "sound" + String(random))
         }
-
+        
         /*
         if index == messages.count - 1 {
             index = 0
